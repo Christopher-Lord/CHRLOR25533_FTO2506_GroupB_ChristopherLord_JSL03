@@ -21,24 +21,24 @@ const allTasks = [
 ];
 
 function addTask() {
-  let task = {};
+  let newTask = {};
 
-  task.id = allTasks.length + 1;
-  task.title = prompt("Enter Task Title:");
-  task.description = prompt("Enter Task Description:");
+  newTask.id = allTasks.length + 1;
+  newTask.title = prompt("Enter Task Title:");
+  newTask.description = prompt("Enter Task Description:");
 
   const validStatuses = ["todo", "doing", "done"];
 
   do {
-    task.status = prompt("Enter Task Status:").toLowerCase();
+    newTask.status = prompt("Enter Task Status:").toLowerCase();
 
-    if (!validStatuses.includes(task.status)) {
+    if (!validStatuses.includes(newTask.status)) {
       alert("Invalid status. Please enter 'todo', 'doing' or 'done'.");
     }
     
-  } while (!validStatuses.includes(task.status));
+  } while (!validStatuses.includes(newTask.status));
 
-  allTasks.push(task);
+  allTasks.push(newTask);
 }
 
 while (allTasks.length < 6 && confirm("Would you like to add a new task?")) {
