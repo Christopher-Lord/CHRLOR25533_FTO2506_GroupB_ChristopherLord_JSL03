@@ -1,13 +1,47 @@
-# JSL03 Project Brief: Console-Based Task Manager
+# JSL03 Project: Console-Based Task Manager
+
+## Project Description
+
+This project involves creating a **simple task management system** where users can add **up to three new tasks** to an existing task array. Tasks are **stored as objects in an array**, each with a **unique incremental ID**. Users will enter task details via prompts, and the system will allow filtering to view only completed tasks. The project focuses on **array manipulation, user interaction via prompts and alerts, and console logging for task management**.
+
+## Setup Instructions
+
+1. Clone or download this repo
+2. If downloaded, extract files and open index.html either in VSCode or straight in your browser
+3. If opened in VSCode, use the Live Server extension to view the web page
+4. Follow the prompts to start entering your tasks!
+5. Open the dev tools console to view the output of your prompts
+
+## Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+
+## Features
+
+- Multiple task entry system through prompts
+- Able to enter task title, description and status
+- All task info gets stored in an array, with a filter for only completed tasks
+- Status validation system so no invalid status can be stored
+- Display of all tasks as well as only completed tasks in the console
+
+## Usage Examples
+
+- Entering and storing multiple different tasks
+- Viewing a list of all your tasks
+- Keeping track of which tasks you have completed
+
+## Usage instructions
+
+- When the first prompt pops up, select 'OK' to start entering tasks
+- Select cancel after entering any **full** task (Title, description and status) to stop the task entry
+- Or continue to select 'OK' to keep entering tasks until you are alerted that your task board is full
 
 ## Important Prerequisite
 
 1. Before starting this challenge, make sure you have reviewed and corrected your JSL02 project using the provided solution. Your prompts for entering task details should be fully functional and include proper validation checks to ensure accurate user input.
 2. **Check the project user stories in your student dashboard**, make sure you understand what is required for each feature.
-
-## Overview
-
-This project involves creating a **simple task management system** where users can add **up to three new tasks** to an existing task array. Tasks are **stored as objects in an array**, each with a **unique incremental ID**. Users will enter task details via prompts, and the system will allow filtering to view only completed tasks. The project focuses on **array manipulation, user interaction via prompts and alerts, and console logging for task management**.
 
 ## Key Objectives
 
