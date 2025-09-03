@@ -23,10 +23,11 @@ const allTasks = [
 function addTask() {
   let task = {};
 
+  task.id = allTasks.length + 1;
   task.title = prompt("Enter Task Title:");
   task.description = prompt("Enter Task Description:");
 
-  let validStatuses = ["todo", "doing", "done"];
+  const validStatuses = ["todo", "doing", "done"];
 
   do {
     task.status = prompt("Enter Task Status:").toLowerCase();
@@ -35,10 +36,12 @@ function addTask() {
       alert("Invalid status. Please enter 'todo', 'doing' or 'done'.");
     }
   } while (!validStatuses.includes(task.status));
+
+  allTasks.push(task);
 }
 
-while (confirm("Would you like to add a new task?")) {
-  addTask(); //Calling the function
+while (allTasks.length < 6 && confirm("Would you like to add a new task?")) {
+  addTask();
 }
 
 if (tasksDone.length !== 0) {
