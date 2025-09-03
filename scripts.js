@@ -35,6 +35,7 @@ function addTask() {
     if (!validStatuses.includes(task.status)) {
       alert("Invalid status. Please enter 'todo', 'doing' or 'done'.");
     }
+    
   } while (!validStatuses.includes(task.status));
 
   allTasks.push(task);
@@ -44,10 +45,13 @@ while (allTasks.length < 6 && confirm("Would you like to add a new task?")) {
   addTask();
 }
 
-if (tasksDone.length !== 0) {
-  for (let i = 0; i !== tasksDone.length; i++) {
-    console.log("Title: " + tasksDone[i].title + "\nStatus: Done\n\n");
-  }
-} else {
-  console.log("No tasks complete, let's get to work!");
+if (allTasks.length >= 6) {
+  alert(
+    "There are enough tasks on your board, please check them in the console.",
+  );
 }
+
+const tasksDone = allTasks.filter((task) => task.status === "done");
+
+console.log("All Tasks:", allTasks);
+console.log("Completed Tasks:", tasksDone);
